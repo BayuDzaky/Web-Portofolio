@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Bayu Dzaky Khoiry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    /* Hilangkan semua margin & padding default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    #resume-content {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    header {
+      background: #f0e7de;
+      padding: 30px;
+      text-align: center;
+      page-break-inside: avoid;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .header-buttons {
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 14px;
+      background: #2a6df4;
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      margin: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1f54b8;
+    }
+
+    section {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+    }
+
+    section h2 {
+      font-size: 20px;
+      border-bottom: 2px solid #2a6df4;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .skills-list, .exp-list, .edu-list {
+      list-style: none;
+    }
+
+    .skills-list li {
+      background: #f0e7de;
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .exp-item, .edu-item {
+      margin-bottom: 20px;
+    }
+
+    .exp-item h3, .edu-item h3 {
+      font-size: 16px;
+      color: #2a6df4;
+    }
+
+    .exp-item span, .edu-item span {
+      font-size: 12px;
+      color: #777;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      background: #f9f9f9;
+      page-break-inside: avoid;
+    }
+
+    @media (max-width: 768px) {
+      #resume-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="resume-content">
+    <header>
+      <img src="d203c258-ca06-482a-82e3-4427031a7159.png" alt="Profile Photo" class="profile-pic">
+      <h1>Bayu Dzaky Khoiry</h1>
+      <p>3D Artist | Graphic Designer | Video Editor</p>
+      <div class="header-buttons">
+        <a href="index.html" class="btn"><i class="fa-solid fa-arrow-left"></i> Back to Profile</a>
+        <button class="btn" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+      </div>
+    </header>
+
+    <section>
+      <h2>Profile Summary</h2>
+      <p>
+        I am a passionate 3D Artist and multimedia creator with experience in modeling, texturing, and rendering.
+        Skilled in Blender, Unity, and Adobe Creative Suite, with a strong eye for detail and visual storytelling.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>3D Modeling</li>
+        <li>Texturing</li>
+        <li>Lighting & Rendering</li>
+        <li>Unity Game Engine</li>
+        <li>Video Editing</li>
+        <li>Graphic Design</li>
+        <li>HTML & CSS</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="exp-list">
+        <div class="exp-item">
+          <h3>Freelance 3D Artist</h3>
+          <span>2022 - Present</span>
+          <p>Created 3D product visualizations, low-poly game assets, and animation projects for various clients.</p>
+        </div>
+        <div class="exp-item">
+          <h3>Video Editor & Designer</h3>
+          <span>2020 - 2022</span>
+          <p>Edited short films, promotional videos, and social media content using Adobe Premiere Pro and After Effects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <h3>MMTC Yogyakarta</h3>
+          <span>2021 - Present</span>
+          <p>Major in Multimedia and Communication Technology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><i class="fa-solid fa-envelope"></i> bayudzaky822@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +62 896-3063-0362</p>
+      <p>
+        <a href="https://www.instagram.com/portofolio02/" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a> |
+        <a href="https://www.linkedin.com/in/bayu-dzaky-269036330/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a> |
+        <a href="https://www.artstation.com/kontorufun9" target="_blank">
+          <i class="fa-brands fa-artstation"></i> ArtStation
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      &copy; 2025 Bayu Dzaky Khoiry. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function downloadPDF() {
+  const element = document.getElementById('resume-content');
+  const opt = {
+    margin: 0,
+    filename: 'Resume_Bayu_Dzaky_Khoiry.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 1 }, // kecilkan skala agar muat
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid'] }
+  };
+
+  // Ubah skala tampilan sebelum print agar muat 1 halaman
+  element.style.transform = "scale(0.85)";
+  element.style.transformOrigin = "top left";
+  element.style.width = "1180px";
+
+  html2pdf().from(element).set(opt).save().then(() => {
+    // Balikin ukuran setelah download
+    element.style.transform = "";
+    element.style.width = "";
+  });
+}
+  </script>
+</body>
+</html>

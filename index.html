@@ -1,229 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="icon" href="favicon.ico.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <title>Portofolio</title>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: row;
+    }
+
+    .left {
+      background: #f0e7de;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .profile-card {
+      background: #fff;
+      width: 80%;
+      max-width: 350px;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .profile-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .profile-card h3 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #999;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 8px;
+      color: #333;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    /* kontak tambahan */
+    .contact-info {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #2a6df4;
+    }
+
+    .right {
+      flex: 2;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h1 {
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .right h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .buttons {
+      margin-bottom: 30px;
+    }
+
+    .buttons button,
+    .buttons a {
+      background: #2a6df4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      margin-right: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buttons a.btn-secondary {
+      background: #eaeaea;
+      color: #333;
+    }
+
+    .buttons button:hover,
+    .buttons a:hover {
+      opacity: 0.9;
+    }
+
+    .right p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    /* ===== MOBILE STYLES ===== */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        flex: none;
+        width: 100%;
+        padding: 40px 20px;
+      }
+
+      .right {
+        padding-top: 20px;
+      }
+
+      .right h1 {
+        font-size: 36px;
+        text-align: center;
+      }
+
+      .right h2 {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .buttons {
+        text-align: center;
+      }
+
+      .right p {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .buttons button,
+      .buttons a {
+        margin-bottom: 10px;
+        width: 100px;
+        text-align: center;
+      }
+
+      .profile-card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <input type="checkbox" id="check">
-    <div class="sidebar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#games">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#kontak">Contact</a></li>
-      </ul>
+  <div class="container">
+    <div class="left">
+      <div class="profile-card">
+        <img src="PP.jpeg" alt="Profile" />
+        <h2>Bayu Dzaky Khoiry</h2>
+        <h3>ARTIST</h3>
+        <div class="socials">
+          <a href="https://www.instagram.com/portofolio02/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bayu-dzaky-269036330/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.youtube.com/@bayudzaky9415" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.artstation.com/kontorufun9" target="_blank">
+            <i class="fa-brands fa-artstation"></i>
+          </a>
+        </div>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i> bayudzaky822@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +62 896-3063-0362</p>
+        </div>
+      </div>
     </div>
-
-    <header>
-      <div class="Container">
-      <h1><a href="">BAYUDZAKY</h1></a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#games">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#kontak">Contact</a></li>
-      </ul>
-
-        <label for="check" class="Mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></label>
-
-     </div>
-    </header>
-
-    <!--BANNER-->
-    <section class="banner">
-      <div class="Container">
-        <div class="banner-kiri">
-        <img src="./WhatsApp Image 2023-10-14 at 08.51.37.jpeg" alt="">
-        <h2>HAI...</br>
-          This is my Portfolio <span class="efek-ngetik"></span></h2>
-          <p>Wellcome and enjoy it!!</p>
-        </div>
+    <div class="right">
+      <h1>Hello World</h1>
+      <h2>Here's who I am & what I do</h2>
+      <div class="buttons">
+        <a href="resume.html" target="_blank" rel="noopener noreferrer">RESUME</a>
+        <a href="Project.html" class="btn-secondary">PROJECTS</a>
       </div>
-    </section>
-
-    <!--Games-->
-    <section id="games">
-      <div class="Container">
-        <h3>Portfolio</h3>
-        <div class="col-4">
-          <a href="https://drive.google.com/file/d/11o7p7HezVUlpt96rLQJ-l7F3Umfh3XIC/view?usp=sharing">
-            <img src="./Devil (1).jpg">
-            <span>Game - King Of Devil</span>
-          </a>
-        </div>
-
-        <div class="col-4">
-          <a href="https://drive.google.com/drive/folders/1MoA1CJWgq6Lc5EIikzfvFqUfrrq6nLBm?usp=sharing">
-            <img src="./Port.png">
-            <span>Game - Ractangle Shooter</span>
-          </a>
-        </div>
-
-        <div class="col-4">
-          <a href="https://drive.google.com/file/d/1iM4a0NJJYh-ZZ_N9_Ac18s9TNSbzV28d/view?usp=sharing">
-            <img src="./CrossedSwords.jpg">
-            <span>Game - The Battle Of Heroes</span>
-          </a>
-        </div>
-
-
-        <div class="col-4">
-          <a href="https://drive.google.com/file/d/1NLFQhP3RR4E2LCmdR3Awd3nPdoa4XaMu/view?usp=sharing">
-            <img src="./Gates.jpg">
-            <span>Game - Dark Cave</span>
-          </a>
-        </div>
-
-        <div class="col-4">
-          <a href="https://drive.google.com/file/d/1gnBHAexDEFdU5gWdIEMEIw9_u693f5fN/view?usp=sharing">
-            <img src="./maxresdefault.jpg">
-            <span>Game - Flappy Bird</span>
-          </a>
-        </div>
-      </div>
-
-
-
-    </section>
-
-    
-
-    <!--Blender-->
-    <section id="blender">
-      <div class="Container">
-        <h3>Portfolio</h3>
-        <div class="col-4">
-          <a>
-            <img src="./Pertama.png">
-            <span>Tai Coffee Shop - Low Poly Blender</span>
-          </a>
-        </div>
-
-          <div class="col-4">
-            <a>
-              <img src="./untitled.png">
-              <span>Spooky House - Low Poly Blender</span>
-            </a>
-          </div>
-
-          <div class="col-4">
-            <a>
-              <img src="./taman Rumah Part 2.png">
-              <span>House Garden - Low Poly Blender</span>
-            </a>
-          </div>
-
-          <div class="col-4">
-            <a>
-              <img src="./camp04.png">
-              <span>Camping In forest - Low Poly Blender</span>
-            </a>
-          </div>
-    </section>
-
-    <!--Unreal-->
-    <section id="blender">
-      <div class="Container">
-        <h3>Portfolio</h3>
-        <div class="col-4">
-          <a href="https://youtu.be/H_YqRm3Vn0s">
-            <img src="./thumbnail 2.png">
-            <span>Cinema - Unreal Engine 5</span>
-          </a>
-        </div>
-
-        <div class="col-4">
-          <a href="https://youtu.be/CpJqlBqV1eQ">
-            <img src="./thumbnail.png">
-            <span>Tree - Unreal Engine 5</span>
-          </a>
-        </div>
-
-        <div class="col-4">
-          <a href="https://youtu.be/TFM37yTv2Po">
-            <img src="./uhuk.png">
-            <span>Push Up - Unreal Engine 5</span>
-          </a>
-        </div>
-    </section>
-
-    <!--About-->
-    <section id="about">
-      <div class="Container">
-        <h3>About</h3>
-        <p>Hi, my name is Bayu Dzaky, I'm a student from MMTC Yogyakarta university, I'm 19 years old, I know a little bit of programming language and I'm also a little bit familiar with editing software. and I've made website, short movies, video games, 3d model lowpoly, and video clips.</p>
-      </div>
-    </section>
-
-    <!--Skills-->
-    <section id="skills">
-      <div class="Container">
-        <h3>Skills</h3>
-        <h4>HTML</h4>
-        <div class="bar">
-          <span class="nilai html">40%</span>
-        </div>
-
-        <h4>CSS</h4>
-        <div class="bar">
-          <span class="nilai css">30%</span>
-        </div>
-
-        <h4>RPG maker</h4>
-        <div class="bar">
-          <span class="nilai rpg">70%</span>
-        </div>
-
-        <h4>Adobe Premiere Pro</h4>
-        <div class="bar">
-          <span class="nilai Pr">60%</span>
-        </div>
-
-        <h4>Blender</h4>
-        <div class="bar">
-          <span class="nilai Blender">30%</span>
-        </div>
-
-      </div>
-    </section>
- 
-
-    <!--Contact-->
-    <section  id="kontak">
-      <div class="Container">
-        <h3>Contact</h3>
-        <div class="col-">
-          <h4>Instagram</h4>
-          <p>@bayudzakyy</p>
-        </div>
-
-        <div class="col-">
-          <h4>Portfolio Instagram</h4>
-          <p>@portofolio02</p>
-        </div>
-
-        <div class="col-">
-          <h4>Email</h4>
-          <p>bayudzaky288@gmail.com</p>
-        </div>
-      </div>
-    </section>
-
-
-    <!--Footer-->
-    <footer>
-      <div class="Container">
-        <small>Copyright &copy;2023 - Bayu Dzaky.</small>
-      </div>
-    </footer>
-
+      <p>
+        Hi, my name is Bayu Dzaky, I'm a student from MMTC Yogyakarta university, I'm 21 years old, 
+        I know a little bit of programming language and I'm also a little bit familiar with editing software. 
+        and I've made website, short movies, video games, 3d model lowpoly, and video clips.
+      </p>
+      <p>
+        I’m a great place for you to tell a story and let your users know a little more about you.
+      </p>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyek Saya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Gilroy', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: #f0e7de;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .profile-card {
+      background: #fff;
+      width: 80%;
+      max-width: 350px;
+      padding: 30px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .profile-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .profile-card h3 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #999;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    .main {
+      flex: 2;
+      padding: 60px 40px;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #2a6df4;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 8px;
+      color: #2a6df4;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 25px 0 15px;
+      color: #555;
+      font-weight: 600;
+      border-left: 4px solid #2a6df4;
+      padding-left: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .download-btn-inline {
+      margin-top: 8px;
+      background: #2a6df4;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-link {
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      background: #2a6df4;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox .download-btn-inline {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar, .main {
+        width: 100%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="profile-card">
+        <img src="PP.jpeg" alt="Profile">
+        <h2>Bayu Dzaky</h2>
+        <h3>ARTIST</h3>
+      </div>
+    </div>
+    <div class="main">
+      <h1>Proyek Saya</h1>
+
+      <!-- Blender Section (dengan sub-section) -->
+      <section>
+        <h2>Blender</h2>
+
+        <h3>3D Produk</h3>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="Serum.jpg" alt="3D Produk 1">
+          </div>
+          <div class="gallery-item">
+            <img src="moisturezer.png" alt="3D Produk 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Produk Kopi.png" alt="3D Produk 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Shampo.png" alt="3D Produk 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Toner.png" alt="3D Produk 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Parfum Terbaru.png" alt="3D Produk 2">
+          </div>
+          
+        </div>
+
+        <h3>3D Character</h3>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="Pramuka2.png" alt="3D Character 1">
+          </div>
+          <div class="gallery-item">
+            <img src="Superhero Side 2.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="PSikopat 3.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="NaikMotor.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Ninja 1.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Astrounut.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Ninja 6.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Musang oren.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="WITCH.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="Virus side.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="hiuuu.png" alt="3D Character 2">
+          </div>
+          <div class="gallery-item">
+            <img src="KURA KURA TINJA.png" alt="3D Character 2">
+          </div>
+        </div>
+
+        <h3>3D Environment</h3>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="OmahHantu.png" alt="3D Environment 1">
+          </div>
+          <div class="gallery-item">
+            <img src="Pertama.png" alt="3D Environment 2">
+          </div>
+          <div class="gallery-item">
+            <img src="PSikopat 3.png" alt="3D Environment 3">
+          </div>
+        </div>
+      </section>
+
+<!-- Design 2D Section -->
+      <section>
+        <h2>Design 2D</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="Ungu.jpg" alt="Design 2D 1">
+            
+          </div>
+          <div class="gallery-item">
+            <img src="Oren.jpg" alt="Design 2D 2">
+            
+          </div>
+          <div class="gallery-item">
+            <img src="Ijo.jpg" alt="Design 2D 2">
+            
+          </div>
+          <div class="gallery-item">
+            <img src="Pink.jpg" alt="Design 2D 2">
+            
+          </div>
+          <div class="gallery-item">
+            <img src="Biru.jpg" alt="Design 2D 2">
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Game Section -->
+      <section>
+  <h2>Game</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="Port.png" alt="Game Project 1">
+      <a href="https://www.youtube.com/watch?v=aGlMs74tDO0" target="_blank">
+        <button class="download-btn-inline">Download</button>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <img src="img/game2.jpg" alt="Game Project 2">
+      <a href="https://www.youtube.com/watch?v=aGlMs74tDO0" target="_blank">
+        <button class="download-btn-inline">Download</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <!-- Video Section -->
+      <section>
+  <h2>Video</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="img/video1.jpg" alt="Video Project 1">
+      <a href="https://www.youtube.com/watch?v=aGlMs74tDO0" target="_blank">
+        <button class="download-btn-inline">View</button>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <img src="img/video2.jpg" alt="Video Project 2">
+      <a href="https://www.youtube.com/watch?v=aGlMs74tDO0" target="_blank">
+        <button class="download-btn-inline">View</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="back-link">
+  <a href="index.html">&larr; Kembali ke Profil</a>
+</div>
+
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="Full View">
+    <a id="download-link" href="#" download><button class="download-btn-inline">Download</button></a>
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const downloadLink = document.getElementById('download-link');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        const src = img.src;
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+
+        if (src.includes('game') || src.includes('video')) {
+          downloadLink.href = src;
+          downloadLink.style.display = 'inline-block';
+        } else {
+          downloadLink.style.display = 'none';
+        }
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
